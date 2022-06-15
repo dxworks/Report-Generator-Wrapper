@@ -1,21 +1,21 @@
 {
-  "name": "@dxworks/echarts-to-pics",
+  "name": "@dxworks/report-generator",
   "version": "0.0.0",
   "description": "Argv a file name containing JSON config objects of graphs, parses it and generate their images",
   "bin": {
-    "echarts-to-pics": "src/generate-images.js"
+    "report-generator": "src/generate-report.js"
   },
   "publishConfig": {
     "access": "public"
   },
   "type": "module",
-  "main": "src/generate-images.js",
+  "main": "src/generate-report.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "cli",
-    "generate-images"
+    "generate-report"
   ],
   "author": "",
   "license": "ISC",
@@ -25,6 +25,7 @@
     "esm": "^3.2.25",
     "jsdom": "^19.0.0",
     "ora": "^6.0.1",
-    "sharp": "^0.30.0"
+    "sharp": "^0.30.0",
+    "svgexport": "^0.4.2"
   }
 }

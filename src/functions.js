@@ -5,7 +5,7 @@ export function print(args) {
    }
 
 export function usage(){
-    console.log(chalk.dim("\nGenerate graphs images by parsing a folder containing their JSON config files.\n"));
+    console.log(chalk.dim("\nGenerate a PowerPoint presentation starting from some graphical configuration files and a structure template file.\n"));
     console.log(chalk.red(" Use:"));
-    console.log("       generate-images <folder-name> *<image-size>\n")
+    console.log("       report-generator <folder-name> <template-file>\n")
 }
