@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
-import { print, usage } from "./functions.js";
+import {print, usage} from "./functions.js";
 import ora from "ora";
-import child_process from "child_process";
-import chalk from "chalk";
 import {generateImages} from "@dxworks/echarts-to-pics";
 import {generateReport} from "@dxworks/report-generator/dist/lib.js";
 
@@ -22,9 +20,15 @@ const directoryPath = args[2];
 const templateFile = args[3];
 //print(templateFile)
 
-generateImages()
+await generateImages(directoryPath, 'jpg', 1000)
 
-generateReport().then(() => console.log("Done"))
+generateReport([templateFile]).then(() => {
+    console.log("Done")
+    spinner.stop()
+}).catch((err) => {
+    console.log("Error");
+    console.log(err)
+})
 
 // var firstModule = child_process.fork('C:/Users/IoanaL/LICENTA/NodeImageGenerator/echarts-to-pics/src/generate-images.js', [directoryPath, 'jpg', '1000'], { silent:true })
 //
