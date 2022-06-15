@@ -1,5 +1,5 @@
 {
-  "name": "@dxworks/report-generator",
+  "name": "@dxworks/report-generator-wrapper",
   "version": "0.0.0",
   "description": "Argv a file name containing JSON config objects of graphs, parses it and generate their images",
   "bin": {
@@ -20,6 +20,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@dxworks/echarts-to-pics": "^0.0.2",
+    "@dxworks/report-generator": "^0.0.1",
     "chalk": "^5.0.0",
     "echarts": "^5.3.0",
     "esm": "^3.2.25",
